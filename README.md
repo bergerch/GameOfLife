@@ -1,10 +1,11 @@
-# Author
+
+# Game of Life 
+für die <http://it-talents.de> competition
+
+## Author
 
 Christian Berger
 
-# Project Title
-
-Game of Life for it-talents.de competition
 
 ## Getting Started
 
