@@ -32,7 +32,11 @@ Das Programm ist in Java geschrieben. Alle Source Datein liegen bei. Zur Entwick
 
 Das Ändern der Fenstergröße (Resizing) führt auch zu einem Ädnern des (x,y) Modells. Zur Laufzeit der Simulation kann daher bei gleitenden Figuren, die über den Rand schreiten eine Fehlberechnung auftreten (eigentlich kein Fehler sondern ein Concurrency Problem,- man müsste das Resizing zur Laufzeit blockieren)
 
-## Weiteres
+## Komplexität
+
+Lebende Zellen werden in einer Hashmap (Generation) gespeichert mit Zugriffszeit in O(1). Der Algorithmus betrachtet nur lebende Zellen, sodass er unabhängig von der Größe des Felds (x,y) Koordinaten skaliert. Die Speicherkomplexität ist O(n) mit n Anzahl der lebenden Zellen, was optimal ist, da jede lebende Zelle zur späteren Betrachtung gespeichert werden muss. Der Algorithmus iteriert über die Hasmap und sucht auch für jede lebende Zelle ihre Nachbarn (maximal 8) als potentielle Kandidaten für die nächste Generation. Anschließend wird die Anzahl der lebenden Nachbarn eines jeden Kandidaten berechnet und die Cornway Regeln angewandt. Die Laufzeitkomplexität ist somit O(n) mit n Anzahl der lebenden Zellen was optimal ist.
+
+## Alternative Regelwerke
 
 Der Code ist genereisch genug um alternative Regelwerke zu unterstüzen e.g.
 ```javascript
@@ -49,7 +53,7 @@ Der Code ist genereisch genug um alternative Regelwerke zu unterstüzen e.g.
      */
      
 ```
-Siehe dazu die Klasse "Game"
+Siehe dazu die Klasse "Game.java"
 
 ### Kontakt
 
