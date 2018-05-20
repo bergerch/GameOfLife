@@ -18,6 +18,7 @@ ausführen (Installiertes Java ist hierfür eine Vorraussetzung)
 
 Alle Inputs können durch eine graphische Benutzeroberfläche erfolgen.
 Ein Klick auf eine Zelle belebt sie (falls tot) oder tötet sie (falls sie schon lebt)
+Man kann auch Linien zeichnen indem man die Maus gedrück hält und über tote Zellen fährt um sie zu beleben (umgekehrt kann man auch mehrere Zellen löschen indem man auf eine lebende Zelle klickt, die Maus gedrüclt hält und über weitere Zellen fährt)
 Für weitere Einstellungen und Features stehen selbsterkärende Bedienelemente zur Verfügung
 
 ## Development
