@@ -10,15 +10,17 @@ Game of Life for it-talents.de competition
 
 Einfach in der Konsole den Befehl
 
-java -jar GameOfLife.jar
+```java -jar GameOfLife.jar```
 
 ausführen (Installiertes Java ist hierfür eine Vorraussetzung)
+
+[logo]: https://github.com/bergerch/GameOfLife/blob/master/gol.png "Conway's Game of Life"
 
 ## Use
 
 Alle Inputs können durch eine graphische Benutzeroberfläche erfolgen.
-Ein Klick auf eine Zelle belebt sie (falls tot) oder tötet sie (falls sie schon lebt)
-Man kann auch Linien zeichnen indem man die Maus gedrück hält und über tote Zellen fährt um sie zu beleben (umgekehrt kann man auch mehrere Zellen löschen indem man auf eine lebende Zelle klickt, die Maus gedrüclt hält und über weitere Zellen fährt)
+Ein Klick auf eine Zelle belebt sie (falls tot) oder tötet sie (falls sie schon lebt).
+Man kann auch Linien zeichnen indem man die Maus gedrück hält und über tote Zellen fährt um sie zu beleben (umgekehrt kann man auch mehrere Zellen löschen indem man auf eine lebende Zelle klickt, die Maus gedrückt hält und über weitere Zellen fährt).
 Für weitere Einstellungen und Features stehen selbsterkärende Bedienelemente zur Verfügung
 
 ## Development
