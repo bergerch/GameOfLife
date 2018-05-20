@@ -40,6 +40,8 @@ Lebende Zellen werden in einer Hashmap (Generation) gespeichert mit Zugriffszeit
 
 Der Code ist generisch genug um alternative Regelwerke zu unterstüzen e.g.
 ```javascript
+
+public class Game implements Grid {
     /*
      * Spielregeln!! Moeglich sind beispielsweise:
      * 
@@ -51,6 +53,8 @@ Der Code ist generisch genug um alternative Regelwerke zu unterstüzen e.g.
      * 02468  |1357     | Antikopiersystem 
      * 3      | 014578  | Explodierend, aehnlich zu Cornway
      */
+    private static final int[] GEBURTS_REGEL = {3 };
+    private static final int[] TODES_REGEL = {0, 1, 4, 5, 6, 7, 8 };
      
 ```
 Siehe dazu die Klasse "Game.java"
