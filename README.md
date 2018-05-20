@@ -18,6 +18,7 @@ ausführen (Installiertes Java ist hierfür eine Vorraussetzung)
 
 Alle Inputs können durch eine graphische Benutzeroberfläche erfolgen.
 Ein Klick auf eine Zelle belebt sie (falls tot) oder tötet sie (falls sie schon lebt)
+Man kann auch Linien zeichnen indem man die Maus gedrück hält und über tote Zellen fährt um sie zu beleben (umgekehrt kann man auch mehrere Zellen löschen indem man auf eine lebende Zelle klickt, die Maus gedrüclt hält und über weitere Zellen fährt)
 Für weitere Einstellungen und Features stehen selbsterkärende Bedienelemente zur Verfügung
 
 ## Development
@@ -31,6 +32,7 @@ Das Ändern der Fenstergröße (Resizing) führt auch zu einem Ädnern des (x,y)
 ## Weiteres
 
 Der Code ist genereisch genug um alternative Regelwerke zu unterstüzen e.g.
+```javascript
     /*
      * Spielregeln!! Moeglich sind beispielsweise:
      * 
@@ -42,8 +44,10 @@ Der Code ist genereisch genug um alternative Regelwerke zu unterstüzen e.g.
      * 02468  |1357     | Antikopiersystem 
      * 3      | 014578  | Explodierend, aehnlich zu Cornway
      */
+     
+```
 Siehe dazu die Klasse "Game"
 
-## Kontakt
+### Kontakt
 
 E-Mail: bergerch@fim.uni-passau.de
