@@ -31,6 +31,7 @@ Das Ändern der Fenstergröße (Resizing) führt auch zu einem Ädnern des (x,y)
 ## Weiteres
 
 Der Code ist genereisch genug um alternative Regelwerke zu unterstüzen e.g.
+```javascript
     /*
      * Spielregeln!! Moeglich sind beispielsweise:
      * 
@@ -42,8 +43,10 @@ Der Code ist genereisch genug um alternative Regelwerke zu unterstüzen e.g.
      * 02468  |1357     | Antikopiersystem 
      * 3      | 014578  | Explodierend, aehnlich zu Cornway
      */
+     
+```
 Siehe dazu die Klasse "Game"
 
-## Kontakt
+### Kontakt
 
 E-Mail: bergerch@fim.uni-passau.de
