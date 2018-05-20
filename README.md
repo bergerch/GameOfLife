@@ -14,7 +14,7 @@ Einfach in der Konsole den Befehl
 
 ausführen (Installiertes Java ist hierfür eine Vorraussetzung)
 
-[logo]: https://github.com/bergerch/GameOfLife/blob/master/gol.png "Conway's Game of Life"
+<img src="https://raw.githubusercontent.com/bergerch/GameOfLife/master/gol.png" width="600" height="400" />
 
 ## Use
 
