@@ -34,7 +34,7 @@ Das Ändern der Fenstergröße (Resizing) führt auch zu einem Ädnern des (x,y)
 
 ## Complexity
 
-Lebende Zellen werden in einer Hashmap (Generation) gespeichert mit Zugriffszeit in O(1). Der in-situ arbeitende Algorithmus betrachtet nur lebende Zellen, sodass er unabhängig von der Größe des Felds (x,y) Koordinaten skaliert. Die Speicherkomplexität ist O(n) mit n Anzahl der lebenden Zellen, was optimal ist, da jede lebende Zelle zur späteren Betrachtung gespeichert werden muss. Der Algorithmus iteriert über die Hasmap und sucht auch für jede lebende Zelle ihre 8 Nachbarn als potentielle Kandidaten für die nächste Generation. Anschließend wird die Anzahl der lebenden Nachbarn eines jeden Kandidaten berechnet und die Cornway Regeln angewandt. Die Laufzeitkomplexität ist somit O(n) mit n Anzahl der lebenden Zellen was optimal ist.
+Lebende Zellen werden in einer Hashmap (Generation) gespeichert mit Zugriffszeit in O(1). Der in-situ arbeitende Algorithmus betrachtet nur lebende Zellen, sodass er unabhängig von der Größe des Felds (x,y) Koordinaten skaliert. Die Speicherkomplexität ist O(n) mit n Anzahl der lebenden Zellen, was optimal ist, da jede lebende Zelle zur späteren Betrachtung gespeichert werden muss. Der Algorithmus iteriert über die Hasmap und sucht auch für jede lebende Zelle ihre 8 Nachbarn als potentielle Kandidaten für die nächste Generation. Anschließend wird die Anzahl der lebenden Nachbarn eines jeden Kandidaten berechnet und die Conway Regeln angewandt. Die Laufzeitkomplexität ist somit O(n) mit n Anzahl der lebenden Zellen was optimal ist.
 
 ## Alternative Rule Sets
 
@@ -53,8 +53,8 @@ public class Game implements Grid {
      * 02468  |1357     | Antikopiersystem 
      * 3      | 014578  | Explodierend, aehnlich zu Cornway
      */
-    private static final int[] GEBURTS_REGEL = {3 };
-    private static final int[] TODES_REGEL = {0, 1, 4, 5, 6, 7, 8 };
+    private static final int[] GEBURTS_REGEL = {3};
+    private static final int[] TODES_REGEL = {0, 1, 4, 5, 6, 7, 8};
      
 ```
 Siehe dazu die Klasse "Game.java"
