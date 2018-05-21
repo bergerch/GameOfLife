@@ -51,7 +51,7 @@ public class Game implements Grid {
      * 0123478| 5       | Anti Cornway 
      * 1357   | 02468   | Kopiersystem 
      * 02468  |1357     | Antikopiersystem 
-     * 3      | 014578  | Explodierend, aehnlich zu Cornway
+     * 3      | 014578  | Explodierend, aehnlich zu Conway
      */
     private static final int[] GEBURTS_REGEL = {3};
     private static final int[] TODES_REGEL = {0, 1, 4, 5, 6, 7, 8};
