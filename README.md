@@ -2,11 +2,6 @@
 # Game of Life 
 
 
-## Author
-
-Christian Berger
-
-
 ## Getting Started
 
 Einfach in der Konsole den Befehl
