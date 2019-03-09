@@ -4,53 +4,50 @@
 
 ## Getting Started
 
-Einfach in der Konsole den Befehl
+Just compile the sources and type in the CLI:
 
 ```java -jar GameOfLife.jar```
-
-ausführen (Installiertes Java ist hierfür eine Vorraussetzung)
 
 <img src="https://raw.githubusercontent.com/bergerch/GameOfLife/master/gol.png" width="600" height="400" />
 
 ## Use
 
-Alle Inputs können durch eine graphische Benutzeroberfläche erfolgen.
-Ein Klick auf eine Zelle belebt sie (falls tot) oder tötet sie (falls sie schon lebt).
-Man kann auch Linien zeichnen indem man die Maus gedrück hält und über tote Zellen fährt um sie zu beleben (umgekehrt kann man auch mehrere Zellen löschen indem man auf eine lebende Zelle klickt, die Maus gedrückt hält und über weitere Zellen fährt).
-Für weitere Einstellungen und Features stehen selbsterkärende Bedienelemente zur Verfügung
+All inputs can be applied using a graphical user interface. A click on cells sets them alive (if dead) or kills them (if alive). You can also draw lines by clicking and hovering over multiple cells. Further features are are cutomizing the size of the cell automata or inserting shapes. You can also choose the speed of the simulation
 
 ## Development
 
-Das Programm ist in Java geschrieben. Alle Source Datein liegen bei. Zur Entwicklung wurde IntelliJ benutzt.
+The programm is written in Java. All sources are included. We use and recommend IntelliJ for development.
 
 ## Known Issues
 
-Das Ändern der Fenstergröße (Resizing) führt auch zu einem Ädnern des (x,y) Modells. Zur Laufzeit der Simulation kann daher bei gleitenden Figuren, die über den Rand schreiten eine Fehlberechnung auftreten (eigentlich kein Fehler sondern ein Concurrency Problem,- man müsste das Resizing zur Laufzeit blockieren)
+Resizing the windowd leads to an alternation of the (x,y) model. At runtime, the simulation can become buggy if figures are sliding over the edge of the window (this is actually more a concurrency problem than a bug as resizing (the ui thread) is not synchronized with the actual simulation)
+
 
 ## Complexity
 
-Lebende Zellen werden in einer Hashmap (Generation) gespeichert mit Zugriffszeit in O(1). Der in-situ arbeitende Algorithmus betrachtet nur lebende Zellen, sodass er unabhängig von der Größe des Felds (x,y) Koordinaten skaliert. Die Speicherkomplexität ist O(n) mit n Anzahl der lebenden Zellen, was optimal ist, da jede lebende Zelle zur späteren Betrachtung gespeichert werden muss. Der Algorithmus iteriert über die Hasmap und sucht auch für jede lebende Zelle ihre 8 Nachbarn als potentielle Kandidaten für die nächste Generation. Anschließend wird die Anzahl der lebenden Nachbarn eines jeden Kandidaten berechnet und die Conway Regeln angewandt. Die Laufzeitkomplexität ist somit O(n) mit n Anzahl der lebenden Zellen was optimal ist.
+Living cells are stored in a hashmap (the current generation) with access in O(1). The algorithm works in-place and only looks as living cells, hence it scales independently of the size of the (x,y) model. The memory complexity is O(n) with n being the number of living cells, which is optimal, since every living cell needs to be inspected by the algorithm. The algorithm iterates over the hashmap and searches for every cell for its neighbors as a potential candidate for the next generation. Then the number of living neighbours of each candidate will be computed and the Cornway rules will be applied. The run-time complexity is thus O(n) which is optimal.
+
 
 ## Alternative Rule Sets
 
-Der Code ist generisch genug um alternative Regelwerke zu unterstüzen e.g.
+Der Code is generic to support different rule sets:
 ```javascript
 
 public class Game implements Grid {
     /*
      * Spielregeln!! Moeglich sind beispielsweise:
      * 
-     * GEBURT | TOT     | Welt 
+     * ALIVE | DEAD     | World 
      * ------------------------ 
      * 3      | 0145678 | Cornway Original 
      * 0123478| 5       | Anti Cornway 
-     * 1357   | 02468   | Kopiersystem 
-     * 02468  |1357     | Antikopiersystem 
-     * 3      | 014578  | Explodierend, aehnlich zu Conway
+     * 1357   | 02468   | Copy System 
+     * 02468  |1357     | Anti copy system
+     * 3      | 014578  | Exploding, similiar zu Conway
      */
-    private static final int[] GEBURTS_REGEL = {3};
-    private static final int[] TODES_REGEL = {0, 1, 4, 5, 6, 7, 8};
+    private static final int[] ALIVE_RULE = {3};
+    private static final int[] KILL_RULE = {0, 1, 4, 5, 6, 7, 8};
      
 ```
-Siehe dazu die Klasse "Game.java"
+See class "Game.java"
 
