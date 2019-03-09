@@ -1,6 +1,6 @@
 
 # Game of Life 
-für die <http://it-talents.de> competition
+
 
 ## Author
 
@@ -59,6 +59,3 @@ public class Game implements Grid {
 ```
 Siehe dazu die Klasse "Game.java"
 
-### Contact
-
-E-Mail: bergerch@fim.uni-passau.de
